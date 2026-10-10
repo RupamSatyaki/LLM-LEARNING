@@ -27,9 +27,37 @@ def calculateResult (grade):
     return result
 
 def getStudentDetails():
-    studentName = str(input("Enter your Full Name: "))
-    obtainedMarks = int(input("Obtained Marks: "))
-    fullMarks = int(input("Full Marks: "))
+
+    # validate student name is only contains alphabets and spaces
+    while True:
+        studentName = input("Enter your Full Name: ")
+
+        if studentName.replace(" ","").isalpha():
+            break
+        else:
+            print("Invalid name! Please enter only alphabets and spaces.")
+
+
+    # validate Obtained Marks is only contains numbers
+    while True:
+        obtainedMarksInput = input("Obtained Marks: ")
+
+        if obtainedMarksInput.isdigit():
+            obtainedMarks = int(obtainedMarksInput)
+            break
+        else:
+            print("Invalid input! Obtained Marks must contain only numbers.")
+
+
+    # validate Full Marks is only contains numbers
+    while True:
+        fullMarksInput = input("Full Marks: ")
+
+        if fullMarksInput.isdigit():
+            fullMarks = int(fullMarksInput)
+            break
+        else:
+            print("Invalid input! Full Marks must contain only numbers.")
     
     
     
@@ -44,9 +72,41 @@ def getStudentDetails():
 
 
 def getLoanDetails ():
-    age = int(input("Enter your age: "))
-    admissionStatus = str(input("Your Admission status(Confirmed/Not confirmed): "))
-    loanAmount = int(input("Loan amount: "))
+
+    while True:
+        ageInput = input("Enter your age: ")
+
+        if ageInput.isdigit():
+            age = int(ageInput)
+
+            if age >= 18 and age <= 35:
+                break
+            else:
+                print("Invalid age! Age must be between 18 and 35.")
+        else:
+            print("Invalid input! Age must contain only numbers.")
+
+    while True:
+        admissionStatus = input("Your Admission status(Confirmed/Not confirmed): ").strip().lower()
+
+        if admissionStatus == "confirmed" or admissionStatus == "not confirmed":
+            break
+        else:
+            print("Invalid input! Please enter only Confirmed or Not Confirmed.")
+
+
+    while True:
+        loanAmountInput = input("Loan amount: ")
+
+        if loanAmountInput.isdigit():
+            loanAmount = int(loanAmountInput)
+
+            if loanAmount <= 750000:
+                break
+            else:
+                print("Invalid Loan Amount! Loan Amount must be under 7,50,000.")
+        else:
+            print("Invalid input! Loan Amount must contain only numbers.")
     
     return age, admissionStatus, loanAmount
 
@@ -62,9 +122,9 @@ def loan_eligibality(loanDetails, result, percentage):
     if age >= 18 and age <= 35:
         if result == "PASS":
             if percentage >= 50:
-                if admissionStatus == "Confirmed":
+                if admissionStatus == "confirmed":
                     if loanAmount <= 750000:
-                        eligiblityStatus = True
+                        eligiblityStatus = "True"
                     else:
                         print("maximum loan amount is 750000, please restart the application")
                 else:
@@ -141,7 +201,7 @@ def main():
         eligiblityStatus = loan_eligibality(loanDetails, result, percentage)
         
         # check eligiblity
-        if eligiblityStatus == True:
+        if eligiblityStatus == "True":
             print("Loan Status: Eligible")
             print("Loan Approved")
             print("check your loan reciept bellow")
