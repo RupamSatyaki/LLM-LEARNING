@@ -1,0 +1,95 @@
+Daily Python Task: Conditional Grading and Loan Eligibility Checker
+
+Task Objective:
+Ek Python program likhna hai jo student ke marks se grade calculate kare aur uske baad education loan eligibility check kare.
+
+Is task mein tum ye Python concepts practice karoge:
+input(), int(), float(), if, elif, else, comparison operators, logical operators, nested if conditions, aur functions.
+
+Part 1: Grading Logic
+
+Program user se ye details input kare:
+
+Student name
+
+Marks obtained
+
+Total marks
+
+Percentage calculate karo:
+percentage = (marks_obtained / total_marks) * 100
+
+Grade calculate karne ke rules:
+
+Agar percentage 90 ya usse zyada hai, grade = A+
+
+Agar percentage 80 se 89 ke beech hai, grade = A
+
+Agar percentage 70 se 79 ke beech hai, grade = B+
+
+Agar percentage 60 se 69 ke beech hai, grade = B
+
+Agar percentage 50 se 59 ke beech hai, grade = C
+
+Agar percentage 40 se 49 ke beech hai, grade = D
+
+Agar percentage 40 se kam hai, grade = F
+
+Agar grade F hai to print karo:
+Result: Fail
+
+Warna print karo:
+Result: Pass
+
+Part 2: Loan Eligibility Logic
+
+Grade calculate hone ke baad program user se ye details input kare:
+
+Age
+
+Admission status: Confirmed ya Not Confirmed
+
+Loan amount
+
+Loan eligibility rules:
+
+Student ki age 18 se 35 ke beech honi chahiye.
+
+Student ka result Pass hona chahiye.
+
+Student ka percentage 50 ya usse zyada hona chahiye.
+
+Admission status Confirmed hona chahiye.
+
+Loan amount 750000 ya usse kam hona chahiye.
+
+Agar upar ki saari conditions true hain, to print karo:
+Loan Status: Eligible
+Message: Congratulations! Your education loan is approved.
+
+Agar student fail hai, percentage 50 se kam hai, age valid nahi hai, ya admission Confirmed nahi hai, to print karo:
+Loan Status: Not Eligible
+Message: Sorry, you do not meet the loan eligibility conditions.
+
+Agar student basic conditions pass karta hai lekin loan amount 750000 se zyada hai, to print karo:
+Loan Status: Conditionally Eligible
+Message: Collateral or additional documents may be required.
+
+Sample Input:
+Enter student name: Suman
+Enter marks obtained: 390
+Enter total marks: 500
+Enter age: 21
+Enter admission status: Confirmed
+Enter loan amount: 500000
+
+Expected Output:
+----- Student Report -----
+Name: Suman
+Percentage: 78.0%
+Grade: B+
+Result: Pass
+
+----- Loan Eligibility -----
+Loan Status: Eligible
+Message: Congratulations! Your education loan is approved.
