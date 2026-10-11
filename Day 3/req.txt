@@ -1,0 +1,68 @@
+Day 3 Tasks
+1. Number Guessing Game
+Computer 1 se 100 ke beech ek random secret number choose kare.
+
+User ko maximum 7 attempts mile.
+
+User se number input le.
+
+Input number 1–100 ke bahar ho to valid range ka message de.
+
+Har guess ke baad attempt count increase kare.
+
+Agar guess chhota hai to “Too low” message de.
+
+Agar guess bada hai to “Too high” message de.
+
+Agar guess correct hai to “Congratulations” aur total attempts print kare.
+
+7 attempts me correct nahi mila to game over message aur secret number reveal kare.
+
+Game khatam hone ke baad user se “play again?” pooche; yes par game restart ho.
+
+2. Prime Checker
+User se ek positive integer input le.
+
+Input 2 se chhota ho to “not prime” print kare.
+
+Input 2 ho to “prime” print kare.
+
+Number ko 2 se uske square root tak check kare.
+
+Agar kisi number se divisible ho jaye to “not prime” print kare.
+
+Kisi se divisible na ho to “prime” print kare.
+
+Negative number ya 0 input par proper invalid/“not prime” message de.
+
+User se multiple numbers check karne ka option de, jab tak user exit na likhe.
+
+3. Fibonacci Sequence
+User se puchhe ki kitne Fibonacci terms chahiye.
+
+n <= 0 ho to positive number enter karne ka message de.
+
+n == 1 ho to sirf 0 print kare.
+
+n == 2 ho to 0 1 print kare.
+
+n > 2 ho to sequence 0, 1, 1, 2, 3, 5, 8... format me print kare.
+
+Har new term pichhli do terms ka sum ho.
+
+Sequence ko ek list me store kare.
+
+End me total number of terms aur list print kare.
+
+User se dobara terms count poochne ka option de.
+
+Common Requirements
+Har task me kam se kam ek function use karo.
+
+User input ko int() se convert karo.
+
+Invalid input, jaise text ya empty input, ko handle karo.
+
+Output messages clear aur user-friendly rakho.
+
+Har program ke end me ek short summary print karo, jaise attempts, result, ya generated sequence.
