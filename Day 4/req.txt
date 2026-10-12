@@ -1,0 +1,167 @@
+Day 4: Dynamic Task / To-Do Manager
+Aaj ka goal: list operations use karke ek interactive task manager banana — add, view, update, complete, delete, aur filter tasks. Ye Day 3 ke loops, conditions, functions aur input handling ka practical extension hai.
+
+Core Requirements
+Program start hone par ek menu dikhaye:
+
+1. Add task
+
+2. View all tasks
+
+3. Mark task as completed
+
+4. Update task
+
+5. Delete task
+
+6. Search tasks
+
+7. Show task statistics
+
+8. Exit
+
+Saare tasks ek list me store ho.
+
+Har task ke liye title, priority, aur status store ho.
+
+User jab tak Exit select na kare, menu repeatedly dikhe.
+
+Invalid menu choice par proper error message de.
+
+Task Data Structure
+Har task ko ek dictionary me rakho:
+
+id: unique task number
+
+title: task ka naam
+
+priority: High, Medium, ya Low
+
+status: Pending ya Completed
+
+created_at: task banne ka date/time
+
+Saare task dictionaries ek main list me store karo.
+
+Add Task
+User se task title input lo.
+
+Title empty na ho; empty ho to error message de.
+
+User se priority input lo: High, Medium, ya Low.
+
+Invalid priority par default Medium set karo.
+
+Naye task ko automatically Pending status do.
+
+Task ID automatically generate karo.
+
+Add hone ke baad confirmation message dikhaye.
+
+View Tasks
+Agar list empty hai to “No tasks available” message de.
+
+Har task ko numbered format me print karo.
+
+Task ke saath ID, title, priority, aur status dikhaye.
+
+Completed tasks ko visually distinguish karo, jaise [DONE] prefix.
+
+Tasks ko ID order me dikhaye.
+
+Mark Task Completed
+User se task ID input lo.
+
+Agar ID exist nahi karti to “Task not found” message de.
+
+Agar task already completed hai to appropriate message de.
+
+Valid task par status ko Completed me update karo.
+
+Completion ke baad updated task details dikhaye.
+
+Update Task
+User se task ID input lo.
+
+User se puchhe kya update karna hai:
+
+Title
+
+Priority
+
+Dono
+
+Title update karna ho to naya title input lo.
+
+Priority update karna ho to valid priority input lo.
+
+Invalid ID par “Task not found” message de.
+
+Update ke baad task ka latest detail print karo.
+
+Delete Task
+User se task ID input lo.
+
+Agar ID valid hai to confirmation poocho: Are you sure? (yes/no).
+
+yes par task list se remove karo.
+
+no par deletion cancel karo.
+
+Invalid ID par “Task not found” message de.
+
+Delete hone ke baad remaining task count dikhaye.
+
+Search Tasks
+User se search keyword input lo.
+
+Title me keyword include ho to wo task dikhaye.
+
+Search case-insensitive ho.
+
+Match na mile to “No matching tasks found” message de.
+
+Multiple matches ho to saare matching tasks print karo.
+
+Task Statistics
+Total tasks count print karo.
+
+Pending tasks count print karo.
+
+Completed tasks count print karo.
+
+Priority-wise task count print karo: High, Medium, Low.
+
+Completion percentage calculate karo:
+
+(completed tasks / total tasks) * 100
+
+Total tasks zero ho to division error avoid karo.
+
+Extra Practice Challenges
+Tasks ko priority ke according sort karke dikhane ka option do.
+
+Sirf pending tasks dikhane ka option do.
+
+Sirf completed tasks dikhane ka option do.
+
+Task title me duplicate check karo; exact same title allowed na ho.
+
+Program band hone se pehle saare tasks ek backup list me save karo.
+
+Har operation ke baad ek short success/error message print karo.
+
+Concepts Practiced
+List add, access, update, remove, search
+
+List of dictionaries
+
+Loop-based menu system
+
+Conditional validation
+
+Functions for each menu action
+
+String methods: lower(), strip(), in
+
+Counting, filtering, sorting, aur percentage calculation
