@@ -1,0 +1,202 @@
+Day 6: Modular Math Function Library
+Aaj ka goal: ek reusable math library banana — functions alag file me, proper docstrings, type annotations, aur error handling ke saath. Type hints batate hain function ko kya input type milega aur kya return hoga; docstring function ka documentation hota hai.
+
+Step 1: Project Structure Banao
+Ek folder banao: math_library
+
+Uske andar do files banao:
+
+math_utils.py — saare math functions yahan likhoge
+
+main.py — library ko import karke test karoge
+
+Dono files same folder me rakho.
+
+Step 2: Module Docstring Likho
+math_utils.py ke sabse top par module docstring likho.
+
+Requirements:
+
+File ka naam aur purpose explain karo.
+
+Available functions ki list do.
+
+Ek chhota usage example likho.
+
+Docstring triple quotes me ho.
+
+Step 3: Basic Math Functions Banao
+Requirements:
+
+add(a, b) — do numbers ka sum return kare.
+
+subtract(a, b) — difference return kare.
+
+multiply(a, b) — product return kare.
+
+Har function ke parameters ka type float ho.
+
+Return type bhi float ho.
+
+Har function me one-line docstring ho.
+
+Function sirf calculation return kare, print() na kare.
+
+Step 4: Division Function with Error Handling
+Requirements:
+
+divide(a, b) function banao.
+
+Division result return kare.
+
+Agar denominator zero ho to ZeroDivisionError raise kare.
+
+Error message clear ho, jaise “Cannot divide by zero.”
+
+Docstring me Args, Returns, aur Raises sections ho.
+
+Step 5: Power Function Banao
+Requirements:
+
+power(base, exponent) function banao.
+
+Base ko exponent power tak calculate kare.
+
+Dono parameters float type ke ho.
+
+Return type float ho.
+
+One-line docstring ho.
+
+Step 6: Even Number Checker
+Requirements:
+
+is_even(number) function banao.
+
+Input type int ho.
+
+Return type bool ho.
+
+Number even ho to True return kare.
+
+Number odd ho to False return kare.
+
+Docstring me Args aur Returns explain karo.
+
+Step 7: Prime Checker Banao
+Requirements:
+
+is_prime(number) function banao.
+
+Input type int aur return type bool ho.
+
+Number 2 se chhota ho to False return kare.
+
+Number ko 2 se square root tak check karo.
+
+Kisi se divisible mil jaye to False return karo.
+
+Kisi se divisible na ho to True return karo.
+
+Docstring me Args aur Returns likho.
+
+Step 8: Factorial Function Banao
+Requirements:
+
+factorial(number) function banao.
+
+Input type int aur return type int ho.
+
+Negative number par ValueError raise kare.
+
+0 ka factorial 1 return kare.
+
+Loop use karke factorial calculate karo.
+
+Docstring me Args, Returns, aur Raises likho.
+
+Step 9: Average Function Banao
+Requirements:
+
+average(numbers) function banao.
+
+Input type list[float] ho.
+
+Return type float ho.
+
+Empty list par ValueError raise kare.
+
+List ke saare numbers ka average return kare.
+
+Docstring me Args, Returns, aur Raises likho.
+
+Step 10: main.py Se Library Test Karo
+Requirements:
+
+math_utils.py se functions import karo.
+
+Har function ko kam se kam ek baar call karo.
+
+Results ko clear format me print karo.
+
+Function names aur results saath dikhao.
+
+Library import karte time only required functions import karo.
+
+Step 11: Error Cases Handle Karo
+Requirements:
+
+divide() ko zero denominator ke saath test karo.
+
+factorial() ko negative number ke saath test karo.
+
+average() ko empty list ke saath test karo.
+
+Har error ko try-except block me handle karo.
+
+Error message print karo, program crash na ho.
+
+Step 12: Docstrings Verify Karo
+Requirements:
+
+help() function se kisi ek function ka documentation dekho.
+
+__doc__ attribute se docstring print karo.
+
+Confirm karo ki har function ka docstring sahi dikh raha hai.
+
+Docstring me function ka purpose, inputs, output, aur exceptions clear hon.
+
+Step 13: Extra Functions Add Karo
+Requirements:
+
+gcd(a, b) — do numbers ka greatest common divisor return kare.
+
+celsius_to_fahrenheit(celsius) — temperature convert kare.
+
+circle_area(radius) — circle ka area return kare.
+
+Negative radius par ValueError raise kare.
+
+Har naye function me type annotations aur docstring add karo.
+
+Step 14: Final Checklist
+math_utils.py me module docstring hai
+
+Har function me type annotations hain
+
+Har function me docstring hai
+
+Division zero error handle hota hai
+
+Factorial negative number handle karta hai
+
+Average empty list handle karta hai
+
+main.py se saare functions test kiye
+
+Error cases try-except se handle kiye
+
+help() se docstrings verify kiye
+
+Code modular hai — calculation aur display alag hain
